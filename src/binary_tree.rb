@@ -8,8 +8,10 @@ class BinaryTree
       neighbors << cell.north if cell.north
       neighbors << cell.east if cell.east
 
-      index = rand(neighbors.length)
-      neighbor = neighbors[index]
+      # Original way of choosing neighbor
+      # index = rand(neighbors.length)
+      # neighbor = neighbors[index]
+      neighbor = neighbors.sample
 
       cell.link(neighbor) if neighbor
     end
