@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Binary Tree is a way to print a Grid
+# Binary Tree is an algorithm to print a Grid
 class BinaryTree
   def self.on(grid)
     grid.each_cell do |cell|
