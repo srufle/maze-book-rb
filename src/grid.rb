@@ -80,7 +80,7 @@ class Grid
         east_boundary = (cell.linked?(cell.east) ? ' ' : '|')
         top << body << east_boundary
 
-        south_boundary = (cell.linked?(cell.south) ? ' ' : '---')
+        south_boundary = (cell.linked?(cell.south) ? '   ' : '---')
         corner = '+'
         bottom << south_boundary << corner
       end
