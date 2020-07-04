@@ -3,6 +3,7 @@ import glob
 import os
 
 files = glob.glob("src/demo_*.rb")
+files.sort()
 for file in files:
     dirname, basename = os.path.split(file)
     # print(basename)
