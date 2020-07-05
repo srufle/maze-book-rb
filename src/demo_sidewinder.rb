@@ -11,4 +11,4 @@ puts grid
 now = Time.new
 img = grid.to_png
 ts = "#{now.year}-#{now.month}-#{now.day}-#{now.hour}-#{now.min}-#{now.sec}"
-img.save "../img/side_winder-#{ts}.png"
+img.save "../img/sidewinder-#{ts}.png"
