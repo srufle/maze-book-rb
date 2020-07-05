@@ -15,6 +15,7 @@ class ColoredGrid < Grid
     intensity = (@maximum - distance).to_f / @maximum
     dark = (255 * intensity).round
     bright = 128 + (127 * intensity).round
+    # Dark Mode:  ChunkyPNG::Color.rgb(0, dark, 0)
     ChunkyPNG::Color.rgb(dark, bright, dark)
   end
 end
