@@ -4,6 +4,24 @@
 class Mask
   attr_reader :rows, :columns
 
+  def self.from_txt(file)
+    lines = File.readlines(file).map(&:strip)
+    lines.pop while lines.last.empty?
+
+    rows = lines.length
+    columns = lines.first.length
+
+    mask = Mask.new(rows, columns)
+
+    mask.rows.times do |row|
+      mask.columns.times do |col|
+        mask[row, col] = (lines[row][col] != 'X')
+      end
+    end
+
+    mask
+  end
+
   def initialize(rows, columns)
     @rows = rows
     @columns = columns
