@@ -6,10 +6,11 @@ require 'sidewinder'
 require 'aldous_broder'
 require 'wilsons'
 require 'hunt_and_kill'
+require 'recursive_backtracker'
 require 'distance_grid'
 require 'colored_grid'
 
-algorithms = [BinaryTree, SideWinder, AldousBroder, Wilsons, HuntAndKill]
+algorithms = [BinaryTree, SideWinder, AldousBroder, Wilsons, HuntAndKill, RecursiveBacktracker]
 tries = 100
 size = 20
 
