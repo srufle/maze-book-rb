@@ -7,8 +7,8 @@ class PolarCell < Cell
   attr_accessor :cw, :ccw, :inward
   attr_reader :outward
 
-  def initialize(_row, _column)
-    super()
+  def initialize(row, column)
+    super(row, column)
     @outward = []
   end
 
