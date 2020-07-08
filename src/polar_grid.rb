@@ -47,6 +47,12 @@ class PolarGrid < Grid
     end
   end
 
+  def [](row, column)
+    return nil unless row.between?(0, @rows - 1)
+
+    @grid[row][column % @grid[row].count]
+  end
+
   def random_cell
     row = rand(@rows)
     col = rand(@grid[row].length)
