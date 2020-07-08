@@ -6,7 +6,7 @@ require 'chunky_png'
 
 # Polar Grid class used for circular Maze
 class PolarGrid < Grid
-  def initialize(rows, _columns)
+  def initialize(rows)
     super(rows, 1)
   end
 
@@ -52,6 +52,7 @@ class PolarGrid < Grid
     col = rand(@grid[row].length)
 
     @grid[row, col]
+    @grid[row][col]
   end
 
   def to_png(cell_size: 50)
