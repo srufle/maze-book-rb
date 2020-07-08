@@ -19,10 +19,12 @@ class PolarGrid < Grid
     (1...@rows).each do |row|
       radius = row.to_f / @rows
       circumference = 2 * Math::PI * radius
+      # TODO: How do we pass bias into initialize
+      bias = 0.25
 
       previous_count = rows[row - 1].length
       estimated_cell_width = circumference / previous_count
-      ratio = (estimated_cell_width / row_height).round
+      ratio = ((estimated_cell_width / row_height) + bias).round
 
       cells = previous_count * ratio
       rows[row] = Array.new(cells) { |col| PolarCell.new(row, col) }
